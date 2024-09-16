@@ -15,6 +15,8 @@ def main():
     bebida_coca = Bebida('Coca Cola', 8.0, 'Grande')
     prato_lasanha = Prato('Lasanha', 20.0, 'Uma lasanha fresquinha')
     restaurante_italiano.adicionar_no_cardapio(bebida_coca)
+    bebida_coca.aplicar_desconto()
+    # prato_lasanha.aplicar_desconto()
     restaurante_italiano.adicionar_no_cardapio(prato_lasanha)
     restaurante_italiano.exibir_cardapio
 
