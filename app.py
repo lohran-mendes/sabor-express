@@ -1,6 +1,7 @@
 from modelo.restaurante import Restaurante
 from modelo.cardapio.bebida import Bebida  
 from modelo.cardapio.prato import Prato
+from modelo.cardapio.sobremesa import Sobremesa
 import os
 
 def main():
@@ -14,10 +15,13 @@ def main():
     # Restaurante.listar_restaurantes()
     bebida_coca = Bebida('Coca Cola', 8.0, 'Grande')
     prato_lasanha = Prato('Lasanha', 20.0, 'Uma lasanha fresquinha')
+    sobremesa_sorvete = Sobremesa('Sorvete', 15.0, 'Um sorvete com três bolas com sabores escolhidos')
     restaurante_italiano.adicionar_no_cardapio(bebida_coca)
-    bebida_coca.aplicar_desconto()
-    # prato_lasanha.aplicar_desconto()
     restaurante_italiano.adicionar_no_cardapio(prato_lasanha)
+    restaurante_italiano.adicionar_no_cardapio(sobremesa_sorvete)
+    bebida_coca.aplicar_desconto()
+    sobremesa_sorvete.aplicar_desconto()
+    # prato_lasanha.aplicar_desconto()
     restaurante_italiano.exibir_cardapio
 
 
